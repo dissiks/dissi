@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — ADAM Services</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="admin-body">
+  <div id="admin-status" class="status-msg hidden" style="position:fixed;top:1rem;right:1rem;z-index:300;max-width:320px"></div>
+
+  <div id="login-view" class="admin-login">
+    <div class="login-card">
+      <h1>Admin Panel</h1>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem">Sign in to manage your website.</p>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Sign In</button>
+      </form>
+      <p style="margin-top:1.25rem;font-size:0.82rem;color:var(--text-muted)">
+        Set <code>ADMIN_PASSWORD</code> in Netlify environment variables.
+      </p>
+    </div>
+  </div>
+
+  <div id="admin-view" class="admin-layout hidden">
+    <aside class="admin-sidebar">
+      <h2>ADAM ADMIN</h2>
+      <nav class="admin-nav">
+        <button data-panel="site" class="active">Site</button>
+        <button data-panel="channels">Channels</button>
+        <button data-panel="payments">Payments</button>
+        <button data-panel="telegram">Telegram</button>
+        <button data-panel="services">Services</button>
+        <button onclick="window.adminLogout()" style="margin-top:1rem;color:var(--danger)">Logout</button>
+      </nav>
+    </aside>
+    <main class="admin-main">
+      <div class="admin-panel active" id="panel-site"></div>
+      <div class="admin-panel" id="panel-channels"></div>
+      <div class="admin-panel" id="panel-payments"></div>
+      <div class="admin-panel" id="panel-telegram"></div>
+      <div class="admin-panel" id="panel-services"></div>
+    </main>
+  </div>
+
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

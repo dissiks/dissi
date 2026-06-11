@@ -1,0 +1,1656 @@
+{
+  "site": {
+    "title": "ADAM SERVICES",
+    "tagline": "Official channels, contact, and payment details",
+    "footer": "\u00a9 2026 ADAM Services. All rights reserved."
+  },
+  "channels": [
+    {
+      "id": "vouches",
+      "label": "Vouches & Deals Channel",
+      "url": "https://t.me/vacsuri",
+      "enabled": true
+    }
+  ],
+  "payments": {
+    "crypto": [
+      {
+        "id": "binance",
+        "label": "Binance (Name: wovv)",
+        "value": "551489010",
+        "enabled": true
+      },
+      {
+        "id": "usdt-trc20",
+        "label": "USDT (TRC20)",
+        "value": "TY2A4JeDe3YTa1ijiF5Xa6XnP8fQpZ7oXE",
+        "enabled": true
+      },
+      {
+        "id": "usdt-bep20",
+        "label": "USDT (BEP20)",
+        "value": "0xb25602c49d4902443ace539a09c822ac15204e0b",
+        "enabled": true
+      },
+      {
+        "id": "ltc",
+        "label": "Litecoin (LTC)",
+        "value": "LMLEPrGsi1YczE4qt42iaoPxcoKM7UY4q3",
+        "enabled": true
+      }
+    ],
+    "wishMoney": {
+      "enabled": true,
+      "label": "Wish Money (Whish)",
+      "phone": "+961 XX XXX XXX",
+      "accountName": "ADAM Services",
+      "instructions": "Send payment via Wish Money app to the number above. Include your Telegram username in the transfer note."
+    }
+  },
+  "telegram": {
+    "username": "vacsuri",
+    "url": "https://t.me/vacsuri",
+    "purchaseCta": "Contact on Telegram to Purchase",
+    "purchaseNote": "To purchase any service and complete payment, contact us on Telegram."
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "subtitle": "Browse available services below. Contact us on Telegram to order and pay.",
+    "showPrices": false
+  },
+  "serviceSections": [
+    {
+      "id": "unban",
+      "title": "Unban Services",
+      "icon": "\ud83d\udd13",
+      "services": [
+        {
+          "name": "Telegram Channel / Group Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "WhatsApp Account Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter / X Account Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Channel Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Account Unban / Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Account Unban / Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Account Unban / Recovery",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Report Services",
+          "price": "",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "usernames",
+      "title": "Usernames Available",
+      "icon": "\u2728",
+      "services": [
+        {
+          "name": "Snapchat Usernames",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Usernames",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter / X OG Usernames",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok OG Usernames",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram OG Usernames",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Premium Accounts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Bot Start | AI Keyword search | Premium Accounts",
+          "price": "",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "verification",
+      "title": "IG Account Verification",
+      "icon": "\u2705",
+      "services": [
+        {
+          "name": "Twitter / X Verification",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Channel Verification",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Verification",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Page Verification",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Blue Badge Verification",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Verified Comments",
+          "price": "",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "boosting",
+      "title": "Followers, Views & Boosting",
+      "icon": "\ud83d\ude80",
+      "services": [
+        {
+          "name": "TikTok Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Subscribers | 100% Active",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Monetization",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Followers | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Followers | Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Followers | Mixed Quality",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Followers | Non Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Followers | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Ads Followers | 100% Real Promotion",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | Low Quality",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | Mixed Quality",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | Hidden",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | Low Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | Non Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes - Phone Farm | Non Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | VIP Speed",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Likes | 100% Real Active",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Power Likes | Best For SEO",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Views | Non Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Views | Best for SEO",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Views | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Split Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Views | Real Ads 100% Discover",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok PK Battle Points",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Share",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Saves",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Repost",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\u23f3TikTok Auto Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ufe0fTikTok Story",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Comment Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Custom Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Random Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Random Comments | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Comments | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Comments Reply",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok AI Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream | Global",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream - \ud835\uddd6\ud835\uddf5\ud835\uddf2\ud835\uddee\ud835\uddfd",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream | Premium",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream | VIP Speed",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream | Stable",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream + Positive Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream + PK Battle Points",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "TikTok Live Stream + 50% Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Live Stream | Arab \ud83c\uddea\ud83c\uddec",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Live Stream Views | Nigeria \ud83c\uddf3\ud83c\uddec",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Live | \ud835\uddd8\ud835\uddfb\ud835\uddf4\ud835\uddee\ud835\uddf4\ud835\uddf2\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Comment | Female-Male-Custom Packages",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 Tiktok USA Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\udde7\ud83c\uddf7 Tiktok Brazil Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddee\ud83c\uddf3 TikTok Indian Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf5\ud83c\uddf0 TikTok pakistan Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec TikTok Arab Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec TikTok Egypt Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf8\ud83c\udde6 TikTok Saudi Arabia Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf1\ud83c\udde7 TikTok Lebanon Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf0\ud83c\uddfc TikTok Kuwait Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Subscribers | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Subscribers | 30 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Subscribers | Lifetime Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Shorts Subscribers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Subscribers | 100% Promotion - Google ADS",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Subscribers | Country",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\u23f0YouTube Watch Hours",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Likes | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Likes | Low Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Likes | Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Likes | Referrer",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Split Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | Real",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | External",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | Suggested",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | Google Search",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | Suggested / YouTube Search / Browse Features",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | Mixed Source",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Premium Views | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Views | High Retention",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 YouTube USA Views | Best for SEO",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 YouTube USA Views by AI | Suggested",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Views | Best for SEO",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Native ADS Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Native ADS Views | VIP Speed",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Embed ADS Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube External ADS Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable RAV Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable RAV-GS Views | Country",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable Language Views | RAV-GS",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable RAV-MTS Views | Country",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable Language Views | RAV-MTS",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable RAV Views | Country",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Monetizable Language Views | RAV",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Views | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Shorts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube CTR Search Views | Boost Search Rankings",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube AdWords Views | Trend Targeting",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Split Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\u23f3Youtube Auto",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Shares | Social Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Shares | Country",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Split Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Custom Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Random Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Comments | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube AI Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Comment Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Comment Reply Likes / Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live Stream Views | 100% Real",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live Stream Views + Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live Stream Views V1",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live Stream Views V2",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live Stream / Premiere Views | RAV",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live | Custom Chat Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Live Chat Comments | Created By AI",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Youtube Live | \ud835\uddd8\ud835\uddfb\ud835\uddf4\ud835\uddee\ud835\uddf4\ud835\uddf2\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\udd95Youtube Community",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "YouTube Task Method Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 YouTube USA Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec YouTube Arab Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\udde7\ud83c\uddf7 Youtube Brazil Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Followers | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Followers | 30 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Followers | 60 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Followers | 90 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Followers | Lifetime Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Premium Followers | Non Drop",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Followers | Active",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Channel",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Likes | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Likes | Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Likes | Mix Qualtiy",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Likes | Active",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Comment Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Photo Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Split Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Reach | Impressions | Profile Visits",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Story",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Story Poll Votes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Saves",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Split Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\u23f3Instagram Auto",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Repost",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Custom Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Random Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Emoji Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Comments | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Instagram Live Stream",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ufe0fInstagram Growth Packages",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 Instagram USA Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf1\ud83c\uddf7 Instagram Latin Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddeb\ud83c\uddf7 Instagram France Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\udde7\ud83c\uddf7 Instagram Brazil Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddef\ud83c\uddf5 Instagram Japenese Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf0\ud83c\uddf5 Instagram Korean Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddee\ud83c\uddf3I Instagram Indian Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Instagram Arab Followers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Instagram Arab Likes | Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Instagram Arab Views | Share | Save",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Followers | Real",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Followers | Global",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Followers | Bot Quality",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Followers | Hidden Quality",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Page Likes + Followers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Group Members",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Group Members | Hidden",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Group Members | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\u23f0Facebook Watch Times",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\u23f0Facebook 100k Reels",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Views | Vip Speed",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Montizable Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Split Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Story Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Post Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Comment Reacts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Comment Reacts | Page Accounts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Comment Mix Reacts | Bots",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Split Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Shares | Post/Photo",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Shares | All Links",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Shares | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Split Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Comments | 100% Organic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Reviews",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Live Stream | Slow",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Live Stream | Fast",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Live Stream V1",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Live Stream V2",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Live Stream V3",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook LiveStream | Organic Viewers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Facebook Live | \ud835\uddd8\ud835\uddfb\ud835\uddf4\ud835\uddee\ud835\uddf4\ud835\uddf2\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 Facebook USA Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf5\ud83c\udded Facebook Philippines Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Facebook Egyptian Page | Profile | Group",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Facebook Egyptian React",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Facebook Arab React to Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Facebook Arab Comments | Reviews",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Facebook Arab Shares | Views | Vote",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Followers | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter followers | Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Communities Members",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Likes | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Likes | Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Tweet Views | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Views | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitter Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddec\ud83c\udde7 Twitter UK Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 Twitter USA Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf8\ud83c\udde6 Twitter Arab Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\udde7\ud83c\uddf7 Twitter Brazil Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddef\ud83c\uddf5 Twitter Japan Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Members",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Members | VIP",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Members | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | No Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | 15-60 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | 90-120 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | 180-365 Days Refill",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | HQ + BIO",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | For Private Channel",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Online Members",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Members | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Bot Start",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Bot Start | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Bot Start",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Bot Start | AI Keyword search | Bot Accounts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views | Last Posts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views | Last Posts | Target",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views | Future Posts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views | Future Posts | Target",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Story Views / Reacts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Views | Real / improve Search Position",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Auto Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Shares | Future Posts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Premium Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Comments | Future Posts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Telegram Votes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddea\ud83c\uddec Telegram Arab",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Snapchat Followers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Snapchat Followers | Targeted",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Snapchat Story Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Kwai Followers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Kwai Views",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Discord Members | Offline",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Discord Members | Online",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Discord Server Boosts",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Discord Reactiona / Reactiona",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Threads",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "WhatsApp Members",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "WhatsApp Votes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "LinkedIn Followers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "LinkedIn Group Members",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "LinkedIn Post Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "LinkedIn Shares",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "LinkedIn Comments",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Spotify",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "SoundCloud Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "SoundCloud Services | Organic Growth",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Reddit",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Kick Services",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Twitch",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Pinterest",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Google Maps Reviews",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "CoinMarketCap Followers",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "CoinMarketCap Likes",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Tiktok Coins",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "All-In-One Traffic [CLV\u2122 - Custom Live Visits]",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Worldwide Traffic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "GEO Targeted Traffic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Worldwide Traffic from Exchange Platforms",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Worldwide Traffic [AWV\u2122 - Automated Website Visits]",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Worldwide Mobile Traffic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "GEO Mobile Traffic",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Mobile Traffic from iPhone 15 [RST\u2122 - Real Social Traffic]",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Masked Website Traffic - Custom",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Website Premium Traffic Packages",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddf0\ud83c\uddf7 South-Korean Targeted Traffic (Premium)",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "\ud83c\uddfa\ud83c\uddf8 USA Targeted Traffic (Premium)",
+          "price": "",
+          "enabled": true
+        },
+        {
+          "name": "Cryptocurrency Niche Targeted Traffic (Premium)",
+          "price": "",
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

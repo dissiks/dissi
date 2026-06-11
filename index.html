@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADAM Services & Payments</title>
+  <meta name="description" content="ADAM Services — official channels, contact, crypto and Wish Money payment details.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="home">
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <section class="hero container">
+      <h1 id="hero-title">ADAM SERVICES</h1>
+      <p id="hero-tagline">Official channels, contact, and payment details</p>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Channels & Contact</h2>
+      <div class="card-grid" id="channels"></div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Payments</h2>
+      <div class="payment-tabs">
+        <button class="tab-btn active" data-tab="tab-crypto">Crypto (Tap to copy)</button>
+        <button class="tab-btn" data-tab="tab-wish">Wish Money</button>
+      </div>
+      <div class="tab-panel active" id="tab-crypto">
+        <div class="card-grid" id="crypto-payments"></div>
+      </div>
+      <div class="tab-panel" id="tab-wish">
+        <div class="card-grid" id="wish-money-payment"></div>
+      </div>
+    </section>
+
+    <section class="section container" style="text-align:center">
+      <p style="color:var(--text-muted);margin-bottom:1rem">Want to order a service? Browse our catalog and contact us on Telegram.</p>
+      <a href="/services.html" class="btn btn-primary">View Services</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
