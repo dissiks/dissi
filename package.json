@@ -1,0 +1,9 @@
+{
+  "name": "adam-services",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ADAM Services website with payments, services catalog, and admin panel",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
