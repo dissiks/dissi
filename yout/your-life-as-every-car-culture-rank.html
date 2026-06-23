@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Life as Every Car Culture Rank — Production Bible</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --bg-card: #12121a;
+      --bg-card-hover: #181824;
+      --surface: #1c1c28;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(232, 93, 44, 0.35);
+      --text: #e8e6e3;
+      --text-muted: #8a8898;
+      --text-dim: #5c5a6a;
+      --accent: #e85d2c;
+      --accent-glow: rgba(232, 93, 44, 0.25);
+      --gold: #c9a227;
+      --mechanic: #4a9eff;
+      --tuner: #e85d2c;
+      --collector: #c9a227;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+      --font-display: "Bebas Neue", sans-serif;
+      --font-body: "DM Sans", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(232, 93, 44, 0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(74, 158, 255, 0.08), transparent),
+        radial-gradient(ellipse 50% 30% at 50% 50%, rgba(201, 162, 39, 0.04), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 1rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--surface);
+    }
+
+    /* Layout */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    section {
+      padding-top: 5rem;
+      scroll-margin-top: 80px;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 6rem;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.35rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      width: fit-content;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge span {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, #fff 30%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      max-width: 720px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .stat-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Section headers */
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 600px;
+      font-size: 1rem;
+    }
+
+    /* Cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-icon.mechanic { background: rgba(74, 158, 255, 0.15); }
+    .card-icon.tuner { background: rgba(232, 93, 44, 0.15); }
+    .card-icon.collector { background: rgba(201, 162, 39, 0.15); }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Path pills */
+    .path-pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .path-pill.mechanic { background: rgba(74, 158, 255, 0.15); color: var(--mechanic); }
+    .path-pill.tuner { background: rgba(232, 93, 44, 0.15); color: var(--tuner); }
+    .path-pill.collector { background: rgba(201, 162, 39, 0.15); color: var(--collector); }
+    .path-pill.all { background: rgba(255, 255, 255, 0.08); color: var(--text-muted); }
+
+    /* Timeline / acts */
+    .acts-bar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .act-chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .act-chip:hover, .act-chip.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(232, 93, 44, 0.08);
+    }
+
+    .act-chip strong { color: var(--text); }
+
+    /* Scene cards */
+    .scenes-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .scene-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .scene-card:hover { border-color: var(--border-accent); }
+
+    .scene-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .scene-number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 48px;
+    }
+
+    .scene-meta h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .scene-time {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .scene-body {
+      padding: 1.5rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 900px) {
+      .scene-body {
+        grid-template-columns: 1fr 1fr;
+      }
+      .scene-narration-block {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .prompt-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .prompt-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .prompt-label.photo { color: #7eb8ff; }
+    .prompt-label.video { color: #ff9e7a; }
+    .prompt-label.narration { color: #e8c84a; }
+
+    .prompt-text {
+      padding: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .narration-text {
+      padding: 1.25rem 1.5rem;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.7;
+      border-left: 3px solid var(--gold);
+      background: rgba(201, 162, 39, 0.04);
+    }
+
+    /* Copy button */
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+
+    .copy-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .copy-btn.copied {
+      border-color: #4ade80;
+      color: #4ade80;
+    }
+
+    /* Style bible */
+    .style-box {
+      background: linear-gradient(135deg, rgba(232, 93, 44, 0.08), rgba(74, 158, 255, 0.05));
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .style-box pre {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      white-space: pre-wrap;
+    }
+
+    /* Table */
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .spec-table th,
+    .spec-table td {
+      text-align: left;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .spec-table th {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .spec-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Full script block */
+    .script-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .script-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .script-toolbar h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .script-content {
+      padding: 2rem;
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--text-muted);
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .script-content p {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .script-content p:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    /* Print */
+    @media print {
+      nav { display: none; }
+      .hero { min-height: auto; padding: 2rem 0; }
+      .scene-card { break-inside: avoid; }
+      .copy-btn { display: none; }
+      body::before { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 1rem 3rem; }
+      nav { padding: 0 1rem; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">CAR CULTURE RANK</a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#style">Style</a>
+        <a href="#acts">Acts</a>
+        <a href="#scenes">Scenes</a>
+        <a href="#script">Script</a>
+        <a href="#checklist">Checklist</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" id="top">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-badge"><span></span> Production Bible · 2D Animated POV</div>
+      <h1>Your Life as Every Car Culture Rank</h1>
+      <p class="hero-subtitle">Mechanic · Tuner · Collector — A complete 7-minute cinematic production package with 42 photo prompts, 42 video prompts, and full ElevenLabs narration.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-value">7:00</div>
+          <div class="stat-label">Total Runtime</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">42</div>
+          <div class="stat-label">Photo Prompts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">42</div>
+          <div class="stat-label">Video Clips</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">10s</div>
+          <div class="stat-label">Per Scene</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2D</div>
+          <div class="stat-label">Animation Style</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="section-header">
+        <div class="section-tag">Main Idea</div>
+        <h2>Three Roads. One Obsession.</h2>
+        <p>Inspired by Chill Pov Guy's "Your Life as Every Rank" series — three parallel journeys through car culture.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon mechanic">🔧</div>
+          <span class="path-pill mechanic">Mechanic Path</span>
+          <h3>Fix & Diagnose</h3>
+          <p>From shop porter to shop owner. You learn that understanding the machine — hands inside the system — is the real skill. Lab scope first. Wiring diagrams before parts.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon tuner">🔥</div>
+          <span class="path-pill tuner">Tuner Path</span>
+          <h3>Modify & Build</h3>
+          <p>From a rusty Civic in your parents' garage to world-record builds. The car and the driver evolve together. Every mistake becomes knowledge.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon collector">🏆</div>
+          <span class="path-pill collector">Collector Path</span>
+          <h3>Own & Preserve</h3>
+          <p>From a Ferrari poster on the ceiling to coach-built Italian legends. Stewardship, patience, and knowledge matter more than money.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>Spec</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Title</td><td><strong>Your Life as Every Car Culture Rank</strong></td></tr>
+            <tr><td>Subtitle</td><td>Mechanic · Tuner · Collector — Every Rank Changes You</td></tr>
+            <tr><td>Format</td><td>2D Flat Cinematic POV Animation</td></tr>
+            <tr><td>Aspect Ratio</td><td>16:9</td></tr>
+            <tr><td>Scene Length</td><td>10 seconds each (hard cut)</td></tr>
+            <tr><td>Narration Tool</td><td>ElevenLabs — Deep male documentary voice</td></tr>
+            <tr><td>Voice Settings</td><td>Stability 55% · Similarity 78% · Style 12% · ~130 wpm</td></tr>
+            <tr><td>Photo AI</td><td>Midjourney / Flux / DALL-E</td></tr>
+            <tr><td>Video AI</td><td>Runway / Kling / Pika</td></tr>
+            <tr><td>Edit</td><td>CapCut / Premiere Pro</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- STYLE BIBLE -->
+    <section id="style">
+      <div class="section-header">
+        <div class="section-tag">Style Lock</div>
+        <h2>Global Style Bible</h2>
+        <p>Append this to every photo and video prompt. Characters are always 2D illustrated — never photoreal.</p>
+      </div>
+
+      <div class="style-box">
+        <pre id="style-prompt">2D flat cinematic animation, limited color palette, moody atmospheric lighting,
+thick clean outlines, subtle film grain, POV-first-person perspective,
+side-profile cars with accurate proportions, illustrated environments,
+no 3D rendering, no photorealism, no text overlays, 16:9 aspect ratio,
+style reference: Chill Pov Guy / cinematic explainer animation
+
+PROTAGONIST (YOU): Age progresses 16→55. Simple illustrated figure, neutral face,
+work clothes change per rank. Always 2D — never photoreal.</pre>
+        <div style="margin-top: 1rem;">
+          <button class="copy-btn" onclick="copyText('style-prompt', this)">Copy Style Prompt</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTS -->
+    <section id="acts">
+      <div class="section-header">
+        <div class="section-tag">Structure</div>
+        <h2>8 Acts · 42 Scenes</h2>
+        <p>Click an act to jump to its scenes.</p>
+      </div>
+
+      <div class="acts-bar">
+        <a class="act-chip" href="#act-1"><strong>01–05</strong> · 0:00 The Spark</a>
+        <a class="act-chip" href="#act-2"><strong>06–12</strong> · 0:50 Rank 1</a>
+        <a class="act-chip" href="#act-3"><strong>13–18</strong> · 2:00 Rank 2–3</a>
+        <a class="act-chip" href="#act-4"><strong>19–23</strong> · 3:00 Rank 4</a>
+        <a class="act-chip" href="#act-5"><strong>24–28</strong> · 3:50 Rank 5</a>
+        <a class="act-chip" href="#act-6"><strong>29–33</strong> · 4:40 Rank 6</a>
+        <a class="act-chip" href="#act-7"><strong>34–37</strong> · 5:30 Rank 7</a>
+        <a class="act-chip" href="#act-8"><strong>38–42</strong> · 6:10 Peak & Legacy</a>
+      </div>
+    </section>
+
+    <!-- SCENES -->
+    <section id="scenes">
+      <div class="section-header">
+        <div class="section-tag">Production</div>
+        <h2>All 42 Scenes</h2>
+        <p>Photo prompt · Video prompt · ElevenLabs narration — one block per 10-second beat.</p>
+      </div>
+
+      <div class="scenes-grid" id="scenes-container"></div>
+    </section>
+
+    <!-- FULL SCRIPT -->
+    <section id="script">
+      <div class="section-header">
+        <div class="section-tag">ElevenLabs</div>
+        <h2>Full Narration Script</h2>
+        <p>Copy the entire script for a single ElevenLabs export, or use per-scene narration above.</p>
+      </div>
+
+      <div class="script-block">
+        <div class="script-toolbar">
+          <h3>Complete Voiceover — ~910 words · 7:00</h3>
+          <button class="copy-btn" onclick="copyScript(this)">Copy Full Script</button>
+        </div>
+        <div class="script-content" id="full-script"></div>
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section id="checklist">
+      <div class="section-header">
+        <div class="section-tag">Workflow</div>
+        <h2>Production Checklist</h2>
+      </div>
+
+      <ul class="checklist">
+        <li>Generate <strong>42 photo prompts</strong> using Midjourney / Flux / DALL-E — append global style bible to each</li>
+        <li>Animate each still into a <strong>10-second video clip</strong> using Runway / Kling / Pika</li>
+        <li>Export narration from <strong>ElevenLabs</strong> — deep male documentary voice, ~130 wpm</li>
+        <li>Import 42 clips + audio into <strong>CapCut or Premiere</strong></li>
+        <li>Hard cut every <strong>10 seconds</strong> — no crossfades (Chill Pov Guy style)</li>
+        <li>Add subtle SFX: engine idle, garage ambience, dyno rumble, crowd at concours</li>
+        <li>Export final video: <strong>1920×1080 · 16:9 · 7:00</strong></li>
+        <li>Upload title: <strong>"Your Life as Every Car Culture Rank"</strong></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    Your Life as Every Car Culture Rank — Production Bible<br>
+    42 Scenes · 7 Minutes · 2D Animated POV · Mechanic · Tuner · Collector
+  </footer>
+
+  <script>
+    const STYLE_SUFFIX = "\n\n2D flat cinematic animation, thick clean outlines, moody lighting, no 3D, no photorealism, 16:9";
+
+    const scenes = [
+      { num: 1, time: "0:00–0:10", act: "act-1", path: "all", title: "The Obsession Begins", photo: "2D flat cinematic animation, POV lying in bed looking up at red Ferrari F40 poster taped to ceiling with four pieces of tape, dark bedroom, moonlight, illustrated style", video: "Slow 2D push-in from POV in bed toward ceiling poster, poster gently ripples from fan breeze, flat illustrated animation", narration: "Three roads. One obsession. Somewhere right now, a kid is staring at a car they can't afford — and feeling something they don't have words for yet." },
+      { num: 2, time: "0:10–0:20", act: "act-1", path: "all", title: "Drawing in Margins", photo: "2D illustration, 12-year-old boy at school desk drawing car side profiles in notebook margins, teacher walking past in background, flat cinematic style, muted classroom tones", video: "2D animated close-up of pencil drawing car silhouette in notebook margin, hand moves in loop, flat illustration, subtle camera drift", narration: "At school you fill the margins of your notebooks with cars. Side profiles mostly. The proportions are wrong at first — but you practice, and they get better." },
+      { num: 3, time: "0:20–0:30", act: "act-1", path: "all", title: "Three Garages", photo: "2D triptych split-screen, LEFT: concrete home garage with Honda Civic, CENTER: wooden crate of car magazines under desk, RIGHT: auto shop floor with lift, flat illustrated cinematic style", video: "2D triptych panels illuminate one by one left to right, subtle parallax on each scene, flat animation, camera slowly zooms out", narration: "One of you is in a concrete garage with a rusty hatchback. One has magazines in a wooden crate. One is watching a man talk about Jaguar suspension at a Sunday car show." },
+      { num: 4, time: "0:30–0:40", act: "act-1", path: "tuner", title: "The Starting Point", photo: "2D flat animation, 1995 Honda Civic hatchback with rust on wheel arches in cramped home garage, fluorescent tube hanging from ceiling, chest freezer pushed to side, laptop on step stool", video: "2D garage scene, fluorescent light flickers on, camera pans from Civic rust to laptop on stool, flat illustrated style, moody tungsten light", narration: "The tuner: sixteen years old. A 1995 Honda Civic with rust and a rattling exhaust. To everyone else, it's a problem. To you, it's a starting point." },
+      { num: 5, time: "0:40–0:50", act: "act-1", path: "all", title: "Title Moment", photo: "2D cinematic wide shot, three illustrated car silhouettes on dark background, wrench icon, turbo flame icon, trophy icon above each, minimal flat design", video: "2D title animation, three car silhouettes slide up from bottom, icons fade in above, subtle dust particles, flat illustrated style", narration: "This is your life — at every rank — as a mechanic, a tuner, and a collector. Every rank changes you." },
+      { num: 6, time: "0:50–1:00", act: "act-2", path: "mechanic", title: "Shop Porter", photo: "2D illustration, young shop porter in uniform sweeping garage floor, cars on lifts in background, master tech working, flat cinematic style", video: "2D animated shop floor, porter sweeps while glancing up at technician on lift, flat illustration, slow lateral camera pan", narration: "Level one. The mechanic: you're a shop porter. You move cars, sweep floors, and watch the real technicians work. You don't touch anything important yet." },
+      { num: 7, time: "1:00–1:10", act: "act-2", path: "mechanic", title: "Watching Everything", photo: "2D close-up illustration, porter's eyes watching master technician's hands work on engine bay, flat cinematic POV from porter perspective, warm shop lighting", video: "2D POV shot, technician's hands move in engine bay, porter watches from below, flat animated style, shallow depth effect in 2D", narration: "But you watch everything. Every movement. Every tool. Every decision. You're learning before you're allowed to learn." },
+      { num: 8, time: "1:10–1:20", act: "act-2", path: "tuner", title: "Learning from YouTube", photo: "2D illustration, 16-year-old in garage installing cold air intake on Civic engine bay, tools scattered on floor, single fluorescent light, flat cinematic style", video: "2D animated install scene, hands attach intake pipe, engine bay detail, flat illustration, subtle zoom on connection point", narration: "The tuner: you watch YouTube on a laptop propped on a step stool. You pause. You go do the thing. You come back and rewind because you did it wrong." },
+      { num: 9, time: "1:20–1:30", act: "act-2", path: "tuner", title: "First Mod", photo: "2D illustration, tuner sitting in Civic driver seat in driveway, engine running, satisfied expression, intake installed visible through open hood, golden hour light", video: "2D driveway scene, hood open with steam wisps, driver sits listening to engine note change, flat animated style, warm sunset glow", narration: "Your first mod is a cold air intake. Three weekends researching. One afternoon installing. The sound changes immediately. At sixteen, that matters enormously." },
+      { num: 10, time: "1:30–1:40", act: "act-2", path: "collector", title: "The Dreamer", photo: "2D illustration, 14-year-old boy at local car concours in park, classic cars on grass, owner beside restored 1963 Jaguar E-Type, Sunday morning light, flat cinematic", video: "2D animated car show, camera pans across classic cars on grass, boy approaches E-Type owner, flat illustration, gentle morning atmosphere", narration: "The collector: you're twelve. A Ferrari F40 poster on your ceiling. You know it has no radio, no air conditioning, no carpet — because Ferrari stripped everything to save weight." },
+      { num: 11, time: "1:40–1:50", act: "act-2", path: "collector", title: "The E-Type Conversation", photo: "2D illustration, older man gesturing at E-Type while boy listens intently, both in 2D illustrated style beside green Jaguar, car show background", video: "2D two-shot conversation scene, man gestures at car body lines, boy nods, flat animated style, slow push-in on their faces", narration: "At fourteen, a man with a restored E-Type talks to you for forty-five minutes about independent rear suspension. You go home and write down everything you can remember." },
+      { num: 12, time: "1:50–2:00", act: "act-2", path: "collector", title: "First Car", photo: "2D illustration, 18-year-old standing beside faded 1994 VW Golf in morning light, rust at sills visible, proud posture, suburban driveway, flat cinematic style", video: "2D morning scene, protagonist walks around Golf admiring it, touches hood gently, flat illustrated animation, soft golden light", narration: "Level two. The collector: your first car is a Volkswagen Golf. Faded paint. Rust at the sills. Nine hundred euros. You love it because it's yours." },
+      { num: 13, time: "2:00–2:10", act: "act-3", path: "mechanic", title: "Lube Tech", photo: "2D illustration, mechanic under car on lift draining oil into pan, lube tech uniform, organized shop bay, flat cinematic style", video: "2D under-car view, oil drains into pan in animated drip loop, flat illustration, shop ambient lighting", narration: "The mechanic: you're a lube tech now. Oil changes. Tire rotations. Multi-point inspections. The pace is fast. The margin for error is supposed to be zero." },
+      { num: 14, time: "2:10–2:20", act: "act-3", path: "mechanic", title: "Hands Inside", photo: "2D close-up illustration, illustrated hands installing brake pads inside wheel assembly, tools visible, learning moment composition, flat cinematic style", video: "2D animated brake work, hands press pads into caliper, wheel hub rotates slightly, flat illustrated style, tight mechanical framing", narration: "You replace brake pads and understand for the first time how a braking system actually functions — by having your hands inside one." },
+      { num: 15, time: "2:20–2:30", act: "act-3", path: "tuner", title: "Lowering Springs", photo: "2D illustration, tuner compressing lowering spring with borrowed spring compressor tool, cautious posture, Civic on jack stands, home garage, flat cinematic", video: "2D garage scene, spring compressor tightens in animated loop, tuner works carefully, flat illustration, tense framing", narration: "The tuner: lowering springs. The first time without proper tools, it nearly takes your hand off. You borrow a compressor from a neighbor and follow the process with extreme caution." },
+      { num: 16, time: "2:30–2:40", act: "act-3", path: "tuner", title: "Car Meet", photo: "2D cinematic wide shot, car meet parking lot at dusk, modified cars lined up, illustrated people chatting between vehicles, wet pavement reflections, flat style", video: "2D car meet pan, camera moves along row of modified cars, people gesture and talk, headlights flick on, flat animated dusk scene", narration: "Level three. The tuner: car meets. A parking lot on Sunday evenings. You show up feeling like everyone knows each other — and you know nobody." },
+      { num: 17, time: "2:40–2:50", act: "act-3", path: "collector", title: "The Alfa GTV", photo: "2D illustration, red Alfa Romeo GTV on Italian countryside road, brown accordion folder of service records on passenger seat, flat cinematic", video: "2D driving scene, Alfa GTV moves along illustrated Italian road, camera tracks alongside, service folder visible through window", narration: "The collector: an Alfa Romeo GTV from a man in northern Italy. One hundred sixty thousand kilometers — with documentation for every single one." },
+      { num: 18, time: "2:50–3:00", act: "act-3", path: "collector", title: "The Community", photo: "2D illustration, car club gathering in parking lot, Alfa Romeos lined up, protagonist talking with older enthusiasts, flat cinematic style", video: "2D club meet scene, group conversation animated with subtle gestures, cars in background, flat illustration, warm afternoon light", narration: "You join clubs. You meet people who've been doing this for thirty years. Car collecting is not a solo activity. The knowledge lives in the community." },
+      { num: 19, time: "3:00–3:10", act: "act-4", path: "tuner", title: "The Eclipse GSX", photo: "2D illustration, Mitsubishi Eclipse GSX in shop bay, turbo AWD coupe, protagonist standing beside it with blueprints and parts list, flat cinematic", video: "2D shop reveal, camera circles Eclipse GSX slowly, turbo badge catches light, flat animated style, dramatic low angle", narration: "Level four. The tuner: the Civic is gone. A Mitsubishi Eclipse GSX. All-wheel drive. Turbocharged from the factory. A platform with a real ceiling." },
+      { num: 20, time: "3:10–3:20", act: "act-4", path: "tuner", title: "System Thinking", photo: "2D technical illustration diagram style, turbo upgrade connected to fuel system connected to intercooler in flow chart layout over Eclipse silhouette, flat cinematic", video: "2D animated system diagram, arrows flow between upgraded components lighting up in sequence, flat illustration, technical blueprint aesthetic", narration: "Every modification has a reason now. Turbo upgraded. Fuel system upgraded. Intercooler upgraded. Every change connects to the next one." },
+      { num: 21, time: "3:20–3:30", act: "act-4", path: "collector", title: "Porsche 911T", photo: "2D illustration, silver 1972 Porsche 911T on winding autumn mountain road, orange and gold trees, air-cooled flat silhouette, flat cinematic style", video: "2D mountain drive, 911T curves along illustrated autumn road, leaves drift, flat animation, camera follows from above", narration: "The collector: a 1972 Porsche 911 T. Matching numbers. Factory certificate. You drive it on a mountain road in autumn and understand why people call certain cars alive." },
+      { num: 22, time: "3:30–3:40", act: "act-4", path: "collector", title: "Research Before Buying", photo: "2D illustration, collector at desk studying factory certificate and VIN documentation, magnifying glass over option codes, flat cinematic style, warm desk lamp", video: "2D desk scene, pages flip in animated loop, magnifying glass moves across VIN plate, flat illustration, focused study atmosphere", narration: "You research before you buy now. Factory option codes. Dating certificates. You know what correct matching numbers looks like — and what it costs to confuse them." },
+      { num: 23, time: "3:40–3:50", act: "act-4", path: "mechanic", title: "First Diagnostic Win", photo: "2D illustration, mechanic with laptop and vacuum gauge diagnosing engine bay, finding small leak, lightbulb moment expression, flat cinematic shop", video: "2D diagnostic scene, smoke wisps from tiny vacuum leak point, mechanic points at it, flat animated style, discovery moment", narration: "The mechanic: your first real diagnostic win. A vacuum leak so small it took three technicians to miss. Diagnosing is a separate skill from building." },
+      { num: 24, time: "3:50–4:00", act: "act-5", path: "tuner", title: "The Subaru Fix", photo: "2D illustration, tuner with laptop and wideband sensor in Subaru engine bay, Saturday garage session, focused expression, flat cinematic style", video: "2D tuning scene, laptop screen data scrolls, tuner adjusts cable in engine bay, flat illustration, blue screen glow on face", narration: "Level five. The tuner: a friend's Subaru tuned by three different people — still rough under boost. You spend a Saturday and find a vacuum leak they all missed." },
+      { num: 25, time: "4:00–4:10", act: "act-5", path: "tuner", title: "500 Horsepower", photo: "2D illustration, heavily modified FWD car on dyno rollers, horsepower graph on screen spiking to 500, magazine cover overlay, flat cinematic", video: "2D dyno scene, rollers spin faster, graph line climbs dramatically, flat animated style, dramatic lighting", narration: "Your build hits five hundred horsepower at the wheels on a platform not designed for it. A Japanese car culture magazine features it. Forty-seven messages from around the world." },
+      { num: 26, time: "4:10–4:20", act: "act-5", path: "collector", title: "Cars with Stories", photo: "2D illustration, Fiat 131 Abarth rally car with period documentation spread on hood, rally stickers, flat cinematic garage lighting", video: "2D garage scene, camera pans across rally documents and photos on hood, flat illustration, nostalgic warm tones", narration: "The collector: a Fiat 131 Abarth that competed in period rallies. A Lancia Fulvia that belonged to a racing journalist. Evidence of lives that no longer exist." },
+      { num: 27, time: "4:20–4:30", act: "act-5", path: "collector", title: "Pre-Purchase Inspection", photo: "2D illustration, collector inspecting car underneath on lift for friend, clipboard in hand, serious assessment posture, flat cinematic shop", video: "2D inspection scene, collector checks undercarriage points with flashlight, flat animated style, methodical camera movement", narration: "Friends ask you to look at a car before they buy. You go. You check what they don't know to check. You save some of them from expensive mistakes." },
+      { num: 28, time: "4:30–4:40", act: "act-5", path: "mechanic", title: "ASE Certified", photo: "2D illustration, ASE certification frames on shop wall behind master mechanic, tools organized on bench, flat cinematic style", video: "2D slow pan across certification frames on wall, tools gleam on bench below, flat illustration, proud atmosphere", narration: "The mechanic: ASE certifications on the wall. Electrical gremlins. Intermittent faults. You're not a professional in title — but you're not an amateur anymore." },
+      { num: 29, time: "4:40–4:50", act: "act-6", path: "collector", title: "Coach-Built Focus", photo: "2D illustration, 1960s Italian coach-built car in dark climate-controlled garage, Zagato curved body lines, dramatic single spotlight, flat cinematic", video: "2D slow pan along coach-built car body curves, spotlight follows car silhouette, flat animated style, museum-quality atmosphere", narration: "Level six. The collector: Italian coach-built cars. Zagato. Pininfarina. Bertone. Craftsmen who no longer exist. Techniques that no longer exist." },
+      { num: 30, time: "4:50–5:00", act: "act-6", path: "collector", title: "The Inner Circle", photo: "2D illustration, small group of serious collectors at Pebble Beach lawn event, rare classic cars, formal attire, flat cinematic style", video: "2D concours scene, small group converses beside rare car, camera drifts past, flat illustration, elegant afternoon light", narration: "The community at this level is forty or fifty people worldwide who share your focus. You know most of them. Reputation is the primary currency." },
+      { num: 31, time: "5:00–5:10", act: "act-6", path: "tuner", title: "Professional Tuner", photo: "2D illustration, professional tuner shop with laptop showing seven ECU platform icons, customer car on lift, waiting list clipboard on wall, flat cinematic", video: "2D shop scene, laptop screen cycles through ECU logos, lift raises car, flat animated style, professional atmosphere", narration: "The tuner: you're doing this for money now. A laptop with seven ECU tuning platforms. A waiting list three weeks long. When it's their car and their money, the standards are absolute." },
+      { num: 32, time: "5:10–5:20", act: "act-6", path: "tuner", title: "Lines Worth Holding", photo: "2D illustration, tuner having serious conversation with customer beside dangerously modified car, firm posture, holding line, flat cinematic shop lighting", video: "2D two-shot conversation, tuner gestures at engine bay problem, customer reacts, flat illustration, tense but respectful framing", narration: "Some builds are genuinely dangerous. You've seen enough engines destroyed by bad decisions. There are lines worth holding — even when someone is upset about it." },
+      { num: 33, time: "5:20–5:30", act: "act-6", path: "mechanic", title: "Lab Scope First", photo: "2D illustration, master mechanic using lab scope probe on wiring harness, waveform on screen, focused diagnostic posture, flat cinematic shop", video: "2D diagnostic scene, oscilloscope waveform animates on screen, probe touches wire, flat illustrated style, technical precision mood", narration: "The mechanic: lab scope first. Wiring diagrams before parts. You teach younger techs that a pending code is information — not noise." },
+      { num: 34, time: "5:30–5:40", act: "act-7", path: "collector", title: "The Collection", photo: "2D illustration, vast climate-controlled car storage facility, multiple rare cars under covers, one being uncovered, flat cinematic", video: "2D storage facility pan, car cover pulls back revealing classic silhouette, flat animation, cool blue facility lighting", narration: "Level seven. The collector: fifteen cars across two climate-controlled facilities. Each documented. Each insured. Each driven at least once per year." },
+      { num: 35, time: "5:40–5:50", act: "act-7", path: "collector", title: "Pebble Beach Judge", photo: "2D illustration, collector judging at Pebble Beach concours with clipboard, rare car on display lawn, formal event atmosphere, flat cinematic", video: "2D judging scene, collector walks around car making notes on clipboard, flat illustrated style, prestigious event lighting", narration: "You've judged at Pebble Beach. Written catalog notes for Bonhams. The community recognizes your opinion carries weight — and you treat that as a responsibility." },
+      { num: 36, time: "5:50–6:00", act: "act-7", path: "tuner", title: "Teaching Workshops", photo: "2D illustration, tuner teaching workshop in three-bay shop, students watching dyno screen, two employees working in background, flat cinematic", video: "2D workshop scene, tuner points at dyno screen, students lean in, flat animation, warm teaching atmosphere", narration: "The tuner: three bays. Two lifts. Your own dyno. You teach workshops. The knowledge that took fifteen years now moves faster through others." },
+      { num: 37, time: "6:00–6:10", act: "act-7", path: "mechanic", title: "Shop Foreman", photo: "2D illustration, shop foreman reviewing repair orders with young technicians, mentoring gesture, busy shop floor behind, flat cinematic style", video: "2D shop floor scene, foreman points at repair order, young techs listen, flat illustration, active shop background motion", narration: "The mechanic: shop foreman. You manage the floor and mentor the young techs. Your judgment is your reputation — and your reputation is your access." },
+      { num: 38, time: "6:10–6:20", act: "act-8", path: "tuner", title: "World Record", photo: "2D illustration, Nissan Skyline on salt flats at dawn, speed blur lines, record attempt atmosphere, flat cinematic dramatic sky", video: "2D salt flat launch, Skyline accelerates with dust trail, speed lines animate, flat illustrated style, dramatic sunrise", narration: "Level eight. The tuner: a Nissan Skyline built for a world record. The first attempt fails. You fix a fuel delivery issue that evening. The second day, the record falls." },
+      { num: 39, time: "6:20–6:30", act: "act-8", path: "collector", title: "Best in Class", photo: "2D illustration, Pebble Beach trophy on hood of winning classic car, collector standing beside it humbly, crowd in background, flat cinematic", video: "2D victory scene, trophy gleam animates, crowd applauds in background silhouettes, flat illustration, golden celebratory light", narration: "The collector: a car you researched wins Best in Class at Pebble Beach. The research was yours. The case for its significance was yours." },
+      { num: 40, time: "6:30–6:40", act: "act-8", path: "mechanic", title: "Your Shop", photo: "2D illustration, mechanic shop owner shaking hands with young apprentice, shop name on door behind, eleven technician photos on wall, flat cinematic", video: "2D mentorship scene, handshake in foreground, camera pulls back revealing shop name, flat animated style, proud legacy mood", narration: "The mechanic: your shop. Your name on the door. Eleven technicians trained who now run their own practices. You still turn wrenches on the jobs that matter." },
+      { num: 41, time: "6:40–6:50", act: "act-8", path: "all", title: "The Legend Drives", photo: "2D illustration, three parallel scenes of protagonist driving at dawn, mountain road, open highway, coastal road, not a crowd in sight, flat cinematic", video: "2D triptych driving scenes, three cars move along empty roads at sunrise, flat animation, peaceful engine-moment atmosphere", narration: "Level nine. The legend. You still drive your cars. Not for the public. Not for photos. Because the relationship between a driver and a car is what this was always about." },
+      { num: 42, time: "6:50–7:00", act: "act-8", path: "all", title: "The Loop", photo: "2D illustration, 12-year-old kid lying in bed staring at car poster on ceiling, same as opening scene, moonlight, hopeful mood, flat cinematic", video: "2D slow zoom into kid's eyes reflecting poster car silhouette, fade to black, flat illustrated animation, emotional closing", narration: "Somewhere right now, a kid has a poster on their ceiling. They'll figure it out. Most do. Some will go further. That's how it's supposed to work." }
+    ];
+
+    const pathLabels = {
+      all: { class: "all", text: "All Paths" },
+      mechanic: { class: "mechanic", text: "Mechanic" },
+      tuner: { class: "tuner", text: "Tuner" },
+      collector: { class: "collector", text: "Collector" }
+    };
+
+    function renderScenes() {
+      const container = document.getElementById("scenes-container");
+      let currentAct = "";
+
+      scenes.forEach(scene => {
+        if (scene.act !== currentAct) {
+          currentAct = scene.act;
+          const actNames = {
+            "act-1": "Act 1 — The Spark (Scenes 01–05)",
+            "act-2": "Act 2 — Rank 1: The Bottom (Scenes 06–12)",
+            "act-3": "Act 3 — Rank 2–3: First Contact (Scenes 13–18)",
+            "act-4": "Act 4 — Rank 4: System Thinking (Scenes 19–23)",
+            "act-5": "Act 5 — Rank 5: Known & Respected (Scenes 24–28)",
+            "act-6": "Act 6 — Rank 6: The Specialist (Scenes 29–33)",
+            "act-7": "Act 7 — Rank 7: The Institution (Scenes 34–37)",
+            "act-8": "Act 8 — Rank 8–9: Peak & Legacy (Scenes 38–42)"
+          };
+          const actHeader = document.createElement("div");
+          actHeader.id = scene.act;
+          actHeader.style.cssText = "padding: 2rem 0 1rem; scroll-margin-top: 80px;";
+          actHeader.innerHTML = `<div class="section-tag">${actNames[scene.act].split(" — ")[0]}</div><h3 style="font-family: var(--font-display); font-size: 1.75rem; letter-spacing: 0.04em;">${actNames[scene.act].split(" — ").slice(1).join(" — ")}</h3>`;
+          container.appendChild(actHeader);
+        }
+
+        const path = pathLabels[scene.path];
+        const photoFull = scene.photo + STYLE_SUFFIX;
+        const videoFull = scene.video + STYLE_SUFFIX;
+
+        const card = document.createElement("article");
+        card.className = "scene-card";
+        card.innerHTML = `
+          <div class="scene-header">
+            <div class="scene-number">${String(scene.num).padStart(2, "0")}</div>
+            <div class="scene-meta">
+              <span class="path-pill ${path.class}">${path.text}</span>
+              <h3>${scene.title}</h3>
+              <div class="scene-time">${scene.time}</div>
+            </div>
+          </div>
+          <div class="scene-body">
+            <div class="prompt-block">
+              <div class="prompt-label photo">
+                📷 Photo Prompt
+                <button class="copy-btn" data-copy="${encodeURIComponent(photoFull)}">Copy</button>
+              </div>
+              <div class="prompt-text">${photoFull}</div>
+            </div>
+            <div class="prompt-block">
+              <div class="prompt-label video">
+                🎬 Video Prompt
+                <button class="copy-btn" data-copy="${encodeURIComponent(videoFull)}">Copy</button>
+              </div>
+              <div class="prompt-text">${videoFull}</div>
+            </div>
+            <div class="scene-narration-block">
+              <div class="prompt-block">
+                <div class="prompt-label narration">
+                  🎙️ ElevenLabs Narration
+                  <button class="copy-btn" data-copy="${encodeURIComponent(scene.narration)}">Copy</button>
+                </div>
+                <div class="narration-text">"${scene.narration}"</div>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      document.querySelectorAll(".copy-btn[data-copy]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const text = decodeURIComponent(btn.dataset.copy);
+          navigator.clipboard.writeText(text).then(() => {
+            btn.classList.add("copied");
+            btn.textContent = "Copied!";
+            setTimeout(() => { btn.classList.remove("copied"); btn.textContent = "Copy"; }, 2000);
+          });
+        });
+      });
+    }
+
+    function renderScript() {
+      const container = document.getElementById("full-script");
+      scenes.forEach(scene => {
+        const p = document.createElement("p");
+        p.textContent = scene.narration;
+        container.appendChild(p);
+      });
+    }
+
+    function copyText(id, btn) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add("copied");
+        btn.textContent = "Copied!";
+        setTimeout(() => { btn.classList.remove("copied"); btn.textContent = "Copy Style Prompt"; }, 2000);
+      });
+    }
+
+    function copyScript(btn) {
+      const text = scenes.map(s => s.narration).join("\n\n");
+      navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add("copied");
+        btn.textContent = "Copied!";
+        setTimeout(() => { btn.classList.remove("copied"); btn.textContent = "Copy Full Script"; }, 2000);
+      });
+    }
+
+    renderScenes();
+    renderScript();
+  </script>
+</body>
+</html>

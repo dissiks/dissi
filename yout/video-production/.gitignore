@@ -1,0 +1,5 @@
+output/frames/
+output/audio/
+output/clips/
+output/concat.txt
+build.log
