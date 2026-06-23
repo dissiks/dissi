@@ -1,0 +1,43 @@
+# PUT THIS FOLDER ON YOUR DESKTOP
+
+Everything for **Your Life as Every Car Culture Rank** is inside `yout/`.
+
+## Quick steps (Mac or Windows)
+
+### 1. Download
+Get the folder from GitHub:
+https://github.com/dissiks/dissi/tree/cursor/car-culture-production-html-8d03/yout
+
+Click **Code** → **Download ZIP**
+
+### 2. Move to Desktop
+- Unzip the downloaded file
+- Drag the **`yout`** folder onto your **Desktop**
+
+### 3. Done!
+You should have:
+
+```
+Desktop/
+└── yout/
+    ├── your-life-as-every-car-culture-rank.html   ← open in browser
+    ├── your-life-as-every-car-culture-rank.mp4    ← watch video
+    └── video-production/
+        └── output/
+            └── your-life-as-every-car-culture-rank.mp4
+```
+
+---
+
+## What each file does
+
+| File | Use |
+|------|-----|
+| `.html` | Full script, 42 photo prompts, 42 video prompts |
+| `.mp4` | Final 7-minute video |
+| `build_video.py` | Rebuild the video anytime |
+| `scenes.json` | All scene data |
+
+---
+
+**Note:** Files are built in the cloud. Your Desktop is on your computer — you must download once to get them there.
